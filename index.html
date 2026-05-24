@@ -16,7 +16,7 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#features">Features</a>
-        <a href="#guide">How to Use</a>
+        <a href="#guide">Walkthrough</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -88,46 +88,115 @@
 
       <section class="guide" id="guide" aria-labelledby="guide-title">
         <div class="section-heading">
-          <p class="eyebrow">How to use it</p>
-          <h2 id="guide-title">From ticker to trade plan in a few steps</h2>
+          <p class="eyebrow">Detailed walkthrough</p>
+          <h2 id="guide-title">Use the app step by step, from market data to report</h2>
         </div>
-        <ol class="steps">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Search for a stock</h3>
-              <p>Enter a ticker symbol, choose the market, and load recent market data to fill the current price and chart context.</p>
+        <div class="walkthrough">
+          <article class="walkthrough-step">
+            <div class="step-copy">
+              <span class="step-number">01</span>
+              <h3>Search for a ticker and load market data</h3>
+              <p>
+                Start in the chart screen. Type a stock symbol, choose the market, and run the search.
+                After the data loads, confirm that Current Price, Close, and the candlestick chart are populated.
+              </p>
+              <ul>
+                <li>Use the latest close as the current price when you want a fresh plan.</li>
+                <li>Switch the timeframe before interpreting the chart if your strategy depends on daily or longer candles.</li>
+                <li>If the symbol does not load, verify the market selection and ticker spelling.</li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <h3>Set the swing high and low</h3>
-              <p>Use the price range that matches your analysis. The app calculates Fibonacci levels from that range.</p>
+            <figure>
+              <img src="assets/step-search.svg" alt="Annotated app screenshot showing the ticker search field, market selector, and loaded current price.">
+            </figure>
+          </article>
+
+          <article class="walkthrough-step">
+            <div class="step-copy">
+              <span class="step-number">02</span>
+              <h3>Set the swing high, swing low, and direction</h3>
+              <p>
+                Fibonacci levels are only as useful as the price range you choose. Use a clear recent swing high
+                and swing low from the timeframe you are analyzing.
+              </p>
+              <div class="formula-box">
+                <strong>Pullback formula</strong>
+                <code>Level Price = High - (High - Low) × Retracement%</code>
+                <small>For rebound analysis, the app measures upward from the low: Low + (High - Low) × Retracement%.</small>
+              </div>
+              <ul>
+                <li>Choose Pullback when planning entries after a move down from a high.</li>
+                <li>Choose Rebound when planning levels after a move up from a low.</li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Review the chart and levels</h3>
-              <p>Use the candlestick chart and Fibonacci Levels list to understand where the current price sits relative to each retracement.</p>
+            <figure>
+              <img src="assets/step-range.svg" alt="Annotated app screenshot showing direction, swing high, swing low, and the Fibonacci calculation formula.">
+            </figure>
+          </article>
+
+          <article class="walkthrough-step">
+            <div class="step-copy">
+              <span class="step-number">03</span>
+              <h3>Read the chart and Fibonacci Levels list together</h3>
+              <p>
+                The chart shows price movement, Fibonacci bands, and the current price line. The Fibonacci Levels
+                list gives the exact level prices and the distance from the live price.
+              </p>
+              <ul>
+                <li>The Current Price row is highlighted in purple so it is easy to identify.</li>
+                <li>Distances help you see which staged entries are closest to triggering.</li>
+                <li>Use the chart for context and the list for exact price values.</li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <span>04</span>
-            <div>
-              <h3>Build a staged entry plan</h3>
-              <p>Choose where buying should start, enter your investment amount, and adjust shares per stage if needed.</p>
+            <figure>
+              <img src="assets/step-levels.svg" alt="Annotated app screenshot showing current price on the chart and the purple Current Price row in Fibonacci Levels.">
+            </figure>
+          </article>
+
+          <article class="walkthrough-step">
+            <div class="step-copy">
+              <span class="step-number">04</span>
+              <h3>Build the staged trade plan</h3>
+              <p>
+                Enter the investment amount, choose the first Fibonacci level where buying should start, and review
+                the recommended shares for each stage.
+              </p>
+              <div class="formula-box">
+                <strong>Recommended shares</strong>
+                <code>Per-stage budget = Investment ÷ Number of selected stages</code>
+                <code>Shares = floor(Per-stage budget ÷ Stage price)</code>
+                <small>Remaining cash is assigned to the cheapest selected stages when possible.</small>
+              </div>
+              <ul>
+                <li>Planned Cost shows how much cash the staged plan expects to use.</li>
+                <li>Target Profit estimates profit from staged entries to your target price.</li>
+                <li>Loss Check estimates downside if earlier stages are underwater at a later stage price.</li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <span>05</span>
-            <div>
-              <h3>Save, export, or print</h3>
-              <p>Save setups to Records, then generate a PDF report when you want a clean summary of the plan.</p>
+            <figure>
+              <img src="assets/step-plan.svg" alt="Annotated app screenshot showing staged entry controls, stage prices, recommended shares, and cost calculations.">
+            </figure>
+          </article>
+
+          <article class="walkthrough-step">
+            <div class="step-copy">
+              <span class="step-number">05</span>
+              <h3>Save records and export a PDF report</h3>
+              <p>
+                When the plan looks right, save it to Records. You can revisit saved setups later, compare them,
+                or export a PDF report for your notes.
+              </p>
+              <ul>
+                <li>Use Save to store the current setup inside the app.</li>
+                <li>Use Save PDF when you want a clean summary of one strategy.</li>
+                <li>Use Print when you need a paper copy or a system print workflow.</li>
+              </ul>
             </div>
-          </li>
-        </ol>
+            <figure>
+              <img src="assets/step-report.svg" alt="Annotated app screenshot showing Save, Save PDF, Print, Records, and the generated report summary.">
+            </figure>
+          </article>
+        </div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
