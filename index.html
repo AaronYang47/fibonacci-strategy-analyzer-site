@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn how to use Fibonacci Strategy Analyzer to plan staged stock entries, review Fibonacci levels, and export trading reports.">
+    <title>Fibonacci Strategy Analyzer | App Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fibonacci Strategy Analyzer home">
+        <img src="assets/app-icon.png" alt="" class="brand-icon">
+        <span>Fibonacci Strategy Analyzer</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#guide">How to Use</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Trading workflow companion</p>
+          <h1 id="hero-title">Fibonacci Strategy Analyzer</h1>
+          <p class="hero-text">
+            Plan staged stock entries with Fibonacci retracement levels, live market data,
+            risk checks, and exportable strategy reports.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#guide">Learn the workflow</a>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://outlook.live.com/mail/0/deeplink/compose?to=aaronyang4869%40hotmail.com&subject=Question%20about%20Fibonacci%20Strategy%20Analyzer">Email support</a>
+          </div>
+        </div>
+
+        <div class="product-visual" aria-label="Stylized preview of Fibonacci Strategy Analyzer">
+          <div class="app-window">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+              <strong>AAPL Strategy</strong>
+            </div>
+            <div class="chart-area">
+              <div class="candle c1"></div>
+              <div class="candle c2"></div>
+              <div class="candle c3"></div>
+              <div class="candle c4"></div>
+              <div class="candle c5"></div>
+              <div class="fib-line line-1"><span>38.2%</span></div>
+              <div class="fib-line line-2"><span>61.8%</span></div>
+              <div class="current-line"><span>Current</span></div>
+            </div>
+            <div class="levels-panel">
+              <div><span class="dot blue"></span><strong>38.2% Level</strong><em>$168.42</em></div>
+              <div><span class="dot green"></span><strong>50% Level</strong><em>$162.18</em></div>
+              <div class="current-row"><span class="diamond"></span><strong>Current Price</strong><em>$171.05</em></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">What it helps with</p>
+          <h2 id="features-title">A focused workspace for Fibonacci-based trade planning</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>Fibonacci Levels</h3>
+            <p>Compare the current market price against key retracement levels and quickly see how far each stage is from the live price.</p>
+          </article>
+          <article>
+            <h3>Staged Entry Plan</h3>
+            <p>Split your investment amount across selected Fibonacci stages and review estimated shares, cost, target profit, and downside checks.</p>
+          </article>
+          <article>
+            <h3>Market Data Refresh</h3>
+            <p>Search a ticker, load recent candles, and use the latest close as the current price for a more practical plan.</p>
+          </article>
+          <article>
+            <h3>Records and Reports</h3>
+            <p>Save strategy setups for later review, then export or print PDF reports for your own notes or discussions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="guide" id="guide" aria-labelledby="guide-title">
+        <div class="section-heading">
+          <p class="eyebrow">How to use it</p>
+          <h2 id="guide-title">From ticker to trade plan in a few steps</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Search for a stock</h3>
+              <p>Enter a ticker symbol, choose the market, and load recent market data to fill the current price and chart context.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Set the swing high and low</h3>
+              <p>Use the price range that matches your analysis. The app calculates Fibonacci levels from that range.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Review the chart and levels</h3>
+              <p>Use the candlestick chart and Fibonacci Levels list to understand where the current price sits relative to each retracement.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Build a staged entry plan</h3>
+              <p>Choose where buying should start, enter your investment amount, and adjust shares per stage if needed.</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>Save, export, or print</h3>
+              <p>Save setups to Records, then generate a PDF report when you want a clean summary of the plan.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact info</p>
+          <h2 id="contact-title">Questions about the app?</h2>
+          <p>
+            Send an email for support, feedback, or questions about using Fibonacci Strategy Analyzer.
+          </p>
+        </div>
+        <div class="contact-card">
+          <span>Email</span>
+          <strong>aaronyang4869@hotmail.com</strong>
+          <small id="email-status">Copy the address or open Outlook in your browser.</small>
+          <div class="contact-actions">
+            <button class="button primary" type="button" data-copy-email>Copy email</button>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://outlook.live.com/mail/0/deeplink/compose?to=aaronyang4869%40hotmail.com&subject=Question%20about%20Fibonacci%20Strategy%20Analyzer">Open Outlook</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Fibonacci Strategy Analyzer is an analysis tool. It does not provide financial advice.</p>
+      <p>&copy; 2026 Fibonacci Strategy Analyzer. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
