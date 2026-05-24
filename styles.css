@@ -74,6 +74,7 @@ a {
   width: 34px;
   height: 34px;
   border-radius: 8px;
+  object-fit: cover;
   box-shadow: 0 10px 30px rgba(76, 169, 255, 0.28);
 }
 
@@ -187,7 +188,250 @@ h3 {
 }
 
 .product-visual {
+  display: flex;
+  justify-content: center;
   min-width: 0;
+}
+
+.hero-screenshot,
+.real-shot {
+  position: relative;
+  width: min(100%, 430px);
+  margin-inline: auto;
+}
+
+.hero-screenshot img,
+.real-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.callout {
+  position: absolute;
+  z-index: 2;
+  max-width: 190px;
+  padding: 8px 10px;
+  border: 1px solid rgba(30, 232, 129, 0.5);
+  border-radius: 8px;
+  background: rgba(8, 11, 16, 0.86);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1.2;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.callout::before {
+  content: "";
+  position: absolute;
+  width: var(--line-width, 70px);
+  height: 2px;
+  background: var(--arrow-color, var(--green));
+  transform: rotate(var(--line-angle, 0deg));
+  transform-origin: right center;
+}
+
+.callout::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--arrow-color, var(--green));
+  border-right: 2px solid var(--arrow-color, var(--green));
+  transform: rotate(var(--head-angle, 45deg));
+}
+
+.callout-search {
+  top: 22%;
+  left: -8%;
+  --line-width: 58px;
+  --line-angle: 16deg;
+}
+
+.callout-search::before {
+  top: 18px;
+  right: -54px;
+}
+
+.callout-search::after {
+  top: 24px;
+  right: -60px;
+}
+
+.callout-price {
+  top: 8%;
+  right: -6%;
+  --arrow-color: #42d4ff;
+  --line-width: 52px;
+  --line-angle: -18deg;
+}
+
+.callout-price::before {
+  top: 42px;
+  left: -48px;
+}
+
+.callout-price::after {
+  top: 48px;
+  left: -54px;
+  --head-angle: 225deg;
+}
+
+.callout-range {
+  top: 43%;
+  left: -9%;
+  --arrow-color: #42d4ff;
+  --line-width: 64px;
+  --line-angle: -10deg;
+}
+
+.callout-range::before {
+  top: 16px;
+  right: -60px;
+}
+
+.callout-range::after {
+  top: 11px;
+  right: -66px;
+}
+
+.callout-chart-range,
+.callout-current,
+.callout-fib,
+.callout-plan,
+.callout-tabs,
+.callout-save,
+.callout-records {
+  --arrow-color: var(--purple);
+}
+
+.callout-chart-range {
+  top: 64%;
+  right: -9%;
+  --line-width: 56px;
+  --line-angle: 164deg;
+}
+
+.callout-chart-range::before {
+  top: 16px;
+  left: -48px;
+}
+
+.callout-chart-range::after {
+  top: 11px;
+  left: -54px;
+  --head-angle: 225deg;
+}
+
+.callout-current {
+  top: 64%;
+  left: -8%;
+  --line-width: 54px;
+}
+
+.callout-current::before {
+  top: 18px;
+  right: -50px;
+}
+
+.callout-current::after {
+  top: 13px;
+  right: -56px;
+}
+
+.callout-fib {
+  top: 55%;
+  right: -7%;
+  --line-width: 52px;
+  --line-angle: 180deg;
+}
+
+.callout-fib::before {
+  top: 18px;
+  left: -44px;
+}
+
+.callout-fib::after {
+  top: 13px;
+  left: -50px;
+  --head-angle: 225deg;
+}
+
+.callout-plan {
+  bottom: 1%;
+  left: -7%;
+  --arrow-color: var(--amber);
+  --line-width: 54px;
+  --line-angle: -20deg;
+}
+
+.callout-plan::before {
+  top: 10px;
+  right: -48px;
+}
+
+.callout-plan::after {
+  top: 3px;
+  right: -54px;
+}
+
+.callout-tabs {
+  bottom: 5%;
+  right: -8%;
+  --line-width: 54px;
+  --line-angle: 176deg;
+}
+
+.callout-tabs::before {
+  top: 17px;
+  left: -46px;
+}
+
+.callout-tabs::after {
+  top: 12px;
+  left: -52px;
+  --head-angle: 225deg;
+}
+
+.callout-save {
+  top: 16%;
+  right: -7%;
+  --arrow-color: #42d4ff;
+  --line-width: 54px;
+  --line-angle: 154deg;
+}
+
+.callout-save::before {
+  top: 44px;
+  left: -46px;
+}
+
+.callout-save::after {
+  top: 50px;
+  left: -52px;
+  --head-angle: 225deg;
+}
+
+.callout-records {
+  bottom: 6%;
+  right: -8%;
+  --line-width: 48px;
+  --line-angle: 180deg;
+}
+
+.callout-records::before {
+  top: 17px;
+  left: -42px;
+}
+
+.callout-records::after {
+  top: 12px;
+  left: -48px;
+  --head-angle: 225deg;
 }
 
 .app-window {
@@ -414,6 +658,11 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 12px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.walkthrough-step .real-shot img {
+  border-radius: 28px;
+  box-shadow: var(--shadow);
 }
 
 .step-copy {
