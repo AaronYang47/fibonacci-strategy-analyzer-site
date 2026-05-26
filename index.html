@@ -104,7 +104,7 @@
             </div>
             <figure>
               <div class="device-frame desktop-frame">
-                <img src="assets/screenshot-mac.png" alt="Fibonacci Strategy Analyzer on Mac with sidebar navigation, search, market data, and chart.">
+                <img src="assets/screenshot-mac-overview.png" alt="Fibonacci Strategy Analyzer on Mac showing the full chart workspace, Fibonacci levels, and trade plan.">
               </div>
               <figcaption>Desktop view for larger chart review and report preparation.</figcaption>
             </figure>
@@ -126,7 +126,7 @@
                 Start in the chart screen. Type a stock symbol, choose the market, and run the search.
                 After the data loads, confirm that Current Price, Close, and the candlestick chart are populated.
               </p>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="data">
                 <strong>Market data inputs used by the plan</strong>
                 <code>Current Price = latest loaded market price or latest close</code>
                 <code>Swing High = highest candle high in the selected timeframe</code>
@@ -156,20 +156,20 @@
                 Fibonacci levels are only as useful as the price range you choose. Use a clear recent swing high
                 and swing low from the timeframe you are analyzing.
               </p>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="range">
                 <strong>Swing range</strong>
                 <code>Range = max(abs(High - Low), 0.01)</code>
                 <code>Range = max(abs(493.50 - 356.28), 0.01) = 137.22</code>
                 <small>The 0.01 minimum prevents divide-by-zero style calculations when high and low are the same.</small>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="levels">
                 <strong>Pullback and rebound level formulas</strong>
                 <code>Level Price = High - (High - Low) × Retracement%</code>
                 <code>Rebound Level Price = Low + (High - Low) × Retracement%</code>
                 <code>38.2% Pullback = 493.50 - 137.22 × 0.382 = 441.08</code>
                 <small>Pullback measures down from the swing high. Rebound measures up from the swing low.</small>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="entry">
                 <strong>Recommended entry zone and targets</strong>
                 <code>Entry Start = selected stage, rounded to 38.2%, 50%, 61.8%, 78.6%, or 100%</code>
                 <code>Entry Zone = sorted(Level Price at Entry Start, Level Price at Next Stage)</code>
@@ -181,7 +181,7 @@
                 <code>Rebound First Target = 23.6% level</code>
                 <code>Rebound Second Target = Low</code>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="status">
                 <strong>Entry status</strong>
                 <code>If Entry Zone contains Current Price, Status = In Entry Zone</code>
                 <code>If Current Price &gt; Entry Zone High, Pullback Status = Waiting for Pullback</code>
@@ -210,7 +210,7 @@
                 The chart shows price movement, Fibonacci bands, and the current price line. The Fibonacci Levels
                 list gives the exact level prices and the distance from the live price.
               </p>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="levels">
                 <strong>Displayed Fibonacci level prices</strong>
                 <code>0.0% = 493.50</code>
                 <code>23.6% = 493.50 - 137.22 × 0.236 = 461.12</code>
@@ -220,7 +220,7 @@
                 <code>78.6% = 493.50 - 137.22 × 0.786 = 385.65</code>
                 <code>100.0% = 356.28</code>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="distance">
                 <strong>Distance from current price</strong>
                 <code>Distance = Level Price - Current Price</code>
                 <code>38.2% Distance = 441.08 - 418.57 = +22.51</code>
@@ -228,7 +228,7 @@
                 <code>Current Price Row = 418.57, Distance = Now</code>
                 <small>Positive distance means the level is above the current price. Negative distance means it is below.</small>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="profit">
                 <strong>Profit or loss at any displayed price</strong>
                 <code>Executed Entries = selected stages with Percent ≤ displayed level percent</code>
                 <code>Profit/Loss at Price = Σ((Displayed Price - Entry Price) × Shares) for executed entries</code>
@@ -257,7 +257,7 @@
                 Enter the investment amount, choose the first Fibonacci level where buying should start, and review
                 the recommended shares for each stage.
               </p>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="shares">
                 <strong>Recommended shares</strong>
                 <code>Selected Stages = levels where Percent ≥ Start Buying At and Percent &gt; 0</code>
                 <code>For Start Buying At 38.2%, Selected Stages = 38.2%, 50%, 61.8%, 78.6%, 100%</code>
@@ -271,7 +271,7 @@
                 <code>Extra Shares = buy one more share at the cheapest selected stages while Remaining Cash ≥ Stage Price</code>
                 <small>The live trade plan can assign remaining cash to cheaper stages; saved records show the stored share counts.</small>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="cost">
                 <strong>Stage cost and totals</strong>
                 <code>Stage Cost = Shares × Stage Price</code>
                 <code>38.2% Cost = 4 × 441.08 = 1,764.33</code>
@@ -279,7 +279,7 @@
                 <code>Total Shares = Σ Stage Shares</code>
                 <code>Unused Cash = Investment - Planned Cost</code>
               </div>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="risk">
                 <strong>Profit and risk checks</strong>
                 <code>Triggered Entries at a stage = all selected entries up to that stage</code>
                 <code>Target Profit at Stage = Σ((Target Price - Entry Price) × Shares) for triggered entries</code>
@@ -311,7 +311,7 @@
                 When the plan looks right, save it to Records. You can revisit saved setups later, compare them,
                 or export a PDF report for your notes.
               </p>
-              <div class="formula-box">
+              <div class="formula-box" data-tone="record">
                 <strong>Saved record summary</strong>
                 <code>Saved Investment = Investment Amount at save time</code>
                 <code>Saved Planned Cost = Σ(Saved Stage Shares × Stage Price)</code>
