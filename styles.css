@@ -197,25 +197,19 @@ h3 {
   min-width: 0;
 }
 
-.device-gallery {
-  display: grid;
-  grid-template-columns: minmax(140px, 0.72fr) minmax(220px, 1fr);
-  gap: 14px;
-  align-items: end;
-  width: min(100%, 760px);
-}
-
-.device-card,
+.hero-phone-card,
 .walkthrough-step figure {
   margin: 0;
 }
 
-.device-card {
+.hero-phone-card {
   display: grid;
+  justify-items: center;
   gap: 10px;
 }
 
-.device-card figcaption,
+.hero-phone-card figcaption,
+.platform-card figcaption,
 .walkthrough-step figcaption {
   color: var(--muted);
   font-size: 0.86rem;
@@ -238,26 +232,20 @@ h3 {
   object-fit: cover;
 }
 
-.phone-card {
-  grid-row: span 2;
-}
-
 .phone-frame {
-  width: min(100%, 230px);
+  width: min(100%, 310px);
   aspect-ratio: 1206 / 2622;
   border-radius: 28px;
 }
 
 .tablet-frame {
+  width: min(100%, 520px);
   aspect-ratio: 2064 / 2752;
   border-radius: 24px;
 }
 
-.desktop-card {
-  grid-column: 2;
-}
-
 .desktop-frame {
+  width: min(100%, 680px);
   aspect-ratio: 1960 / 1580;
   border-radius: 14px;
 }
@@ -420,6 +408,7 @@ h3 {
 }
 
 .section,
+.platforms,
 .guide,
 .contact {
   padding: clamp(68px, 9vw, 118px) clamp(20px, 5vw, 72px);
@@ -445,9 +434,47 @@ h3 {
 
 .feature-grid p,
 .steps p,
+.platform-card p,
 .contact p,
 footer {
   color: var(--muted);
+}
+
+.platforms {
+  border-top: 1px solid var(--line);
+}
+
+.platform-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.platform-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.52fr) minmax(420px, 1fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.platform-card h3 {
+  font-size: clamp(1.55rem, 2.6vw, 2.35rem);
+  line-height: 1.05;
+}
+
+.platform-card figure {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.platform-card .tablet-frame,
+.platform-card .desktop-frame {
+  width: min(100%, 760px);
 }
 
 .guide {
@@ -684,14 +711,10 @@ footer p {
   }
 
   .walkthrough-step,
+  .platform-card,
   .walkthrough-step:nth-child(even) .step-copy {
     grid-template-columns: 1fr;
     order: initial;
-  }
-
-  .device-gallery {
-    grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
-    max-width: 680px;
   }
 }
 
@@ -728,16 +751,6 @@ footer p {
 
   .feature-grid {
     grid-template-columns: 1fr;
-  }
-
-  .device-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .phone-card,
-  .desktop-card {
-    grid-column: auto;
-    grid-row: auto;
   }
 
   .phone-frame {
